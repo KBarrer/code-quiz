@@ -2,6 +2,19 @@
     outline: none;
 }
 
+#time {
+    margin: 0px;
+    display: flex;
+    align-items: flex-end;
+}
+
+header {
+    display: flex;
+    justify-content: end;
+    align-items: flex-start;
+    margin: 0px;
+}
+
 main {
     display: flex;
     justify-content: center;

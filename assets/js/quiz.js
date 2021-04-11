@@ -1,9 +1,14 @@
+var questionOne = ["1. strings", "2.booleans", "3. alerts", "4. Numbers"];
+
+var main = document.getElementById("main");
 
 
 function startQuiz() {
-    var main = document.getElementById("main")
-    main.remove();
+    document.getElementById("title").remove();
+    document.getElementById("text").remove();
+    document.getElementById("startQuizBtn").remove();
     startTimer();
+    firstQuestion();
     console.log("IT'S WORKING!");
 }
 
@@ -22,13 +27,36 @@ function beginTime(duration, display) {
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        display.textContent = minutes + ":" + seconds;
+        display.textContent = "Time: " + minutes + ":" + seconds;
 
         if (--timer < 0) {
             timer = 0;
         }
     }, 1000);
 }
+
+function firstQuestion() {
+    var main = document.getElementById("main");
+
+    console.log(main);
+
+    var question = document.createElement("h2");
+    question.innerHTML = "Commonly used data types Do Not Include:";
+    main.appendChild(question);
+
+    var options = document.createElement("div");
+    main.appendChild(options);
+    for (i = 0; i < 4; i++) {
+        var optionsText = document.createElement("button");
+        optionsText.innerHTML = questionOne[i];
+        optionsText.classList.add("btn")
+        options.appendChild(optionsText);
+    };
+    
+    
+    console.log(questionOne);
+
+};
 
 
 
