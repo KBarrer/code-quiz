@@ -1,0 +1,30 @@
+:root:focus {
+    outline: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.btn {
+    background-color: blue;
+    border-radius: 8px;
+    border-color: blue;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    padding: 10px 30px;
+    color: white;
+}
+
+.btn:active {
+    background-color: #243cc2;
+    transform: translateY(4px);
+    outline: none;
+}
+
+.btn:focus {
+    outline: none;
+}
